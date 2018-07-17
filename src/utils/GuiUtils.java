@@ -1,6 +1,10 @@
 package utils;
 
-import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 /**
@@ -9,14 +13,27 @@ import javax.swing.JFrame;
  */
 public class GuiUtils {
 
-    public static int WINDOWS_BAR_HEIGHT = 0;
-    //TODO declarar constante con icono de aplicacion
+    public static final int WINDOWS_BAR_HEIGHT = 0;
+    //TODO corregir el tamano del arreglo, debe ser el total de archivos en carpeta
+    public static final BufferedImage[] ICONS = new BufferedImage[4];
+
+     static {
+        try {
+            //TODO asignar valores a cada elemento del arreglo de acuerdo a cada archivo en carpeta
+            ICONS[0] = ImageIO.read(GuiUtils.class.getResourceAsStream("/res/appico/ico16.png"));
+            ICONS[1] = ImageIO.read(GuiUtils.class.getResourceAsStream("/res/appico/ico32.png"));
+            ICONS[2] = ImageIO.read(GuiUtils.class.getResourceAsStream("/res/appico/ico64.png"));
+            ICONS[3] = ImageIO.read(GuiUtils.class.getResourceAsStream("/res/appico/ico128.png"));
+        } catch (IOException ex) {
+            System.err.println(ex);
+        }
+    }
 
     public static void configuraFrame(JFrame jFrame) {
         jFrame.setSize(jFrame.getPreferredSize().width, jFrame.getPreferredSize().height + WINDOWS_BAR_HEIGHT);
         jFrame.setLocationRelativeTo(null);
         jFrame.setResizable(false);
-        //TODO icono al jFrame
+        jFrame.setIconImages(Arrays.asList(ICONS));
     }
 
 }
