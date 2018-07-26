@@ -71,14 +71,6 @@ public class Start extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        com.alee.laf.WebLookAndFeel.install();
-        new Start().setVisible(true);
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton myData;
     private javax.swing.JButton newTest;
