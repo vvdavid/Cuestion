@@ -5,6 +5,8 @@
  */
 package gui;
 
+import drivers.StartDriver;
+
 /**
  *
  * @author David Vazquez
@@ -17,6 +19,7 @@ public class Start extends javax.swing.JFrame {
     public Start() {
         initComponents();
         utils.GuiUtils.configuraFrame(this);
+        new StartDriver(this);
     }
 
     /**
