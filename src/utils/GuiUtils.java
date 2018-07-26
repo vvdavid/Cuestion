@@ -30,6 +30,7 @@ public class GuiUtils {
     }
 
     public static void configuraFrame(JFrame jFrame) {
+        com.alee.laf.WebLookAndFeel.install();
         jFrame.setSize(jFrame.getPreferredSize().width, jFrame.getPreferredSize().height + WINDOWS_BAR_HEIGHT);
         jFrame.setLocationRelativeTo(null);
         jFrame.setResizable(false);
