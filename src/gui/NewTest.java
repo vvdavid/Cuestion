@@ -5,13 +5,15 @@
  */
 package gui;
 
+import Interfaces.GoBackButton;
+import javax.swing.JButton;
 import utils.GuiUtils;
 
 /**
  *
  * @author David Vazquez
  */
-public class NewTest extends javax.swing.JFrame {
+public class NewTest extends javax.swing.JFrame implements GoBackButton {
 
     /**
      * Creates new form NewTest
@@ -35,6 +37,7 @@ public class NewTest extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         itemCount = new javax.swing.JLabel();
         startTest = new javax.swing.JButton();
+        goBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Nuevo examen");
@@ -49,6 +52,8 @@ public class NewTest extends javax.swing.JFrame {
         startTest.setText("Iniciar test");
         startTest.setEnabled(false);
 
+        goBack.setText("Regresar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -59,7 +64,8 @@ public class NewTest extends javax.swing.JFrame {
                     .addComponent(panel)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(goBack))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -72,9 +78,11 @@ public class NewTest extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(goBack))
                 .addGap(18, 18, 18)
-                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+                .addComponent(panel, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -122,10 +130,21 @@ public class NewTest extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton goBack;
     private javax.swing.JLabel itemCount;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane panel;
     private javax.swing.JButton startTest;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public JButton getGoBackButton() {
+        return goBack;
+    }
+
+    @Override
+    public void setGoBackButton(JButton newGoBackButton) {
+        goBack = newGoBackButton;
+    }
 }
