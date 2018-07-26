@@ -17,7 +17,7 @@ public class GuiUtils {
     //TODO corregir el tamano del arreglo, debe ser el total de archivos en carpeta
     public static final BufferedImage[] ICONS = new BufferedImage[4];
 
-     static {
+    static {
         try {
             //TODO asignar valores a cada elemento del arreglo de acuerdo a cada archivo en carpeta
             ICONS[0] = ImageIO.read(GuiUtils.class.getResourceAsStream("/res/appico/ico16.png"));
@@ -34,6 +34,11 @@ public class GuiUtils {
         jFrame.setLocationRelativeTo(null);
         jFrame.setResizable(false);
         jFrame.setIconImages(Arrays.asList(ICONS));
+    }
+
+    public static void open(JFrame oldJFrame, JFrame newJFrame) {
+        oldJFrame.dispose();
+        newJFrame.setVisible(true);
     }
 
 }
