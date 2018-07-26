@@ -5,7 +5,7 @@
  */
 package gui;
 
-import Interfaces.GoBackButton;
+import interfaces.GoBackButton;
 import drivers.NewTestDriver;
 import javax.swing.JButton;
 import utils.GuiUtils;
@@ -22,9 +22,12 @@ public class NewTest extends javax.swing.JFrame implements GoBackButton {
      * Creates new form NewTest
      */
     private NewTest() {
+        //init design stuff
         GuiUtils.configuraFrame(this);
         initComponents();
         new NewTestDriver(this);
+        //load category panels
+        
     }
 
     /**
