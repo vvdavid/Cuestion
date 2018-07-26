@@ -81,4 +81,28 @@ public class Start extends javax.swing.JFrame {
     private javax.swing.JButton newTest;
     private javax.swing.JButton prefs;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JButton getMyData() {
+        return myData;
+    }
+
+    public void setMyData(javax.swing.JButton myData) {
+        this.myData = myData;
+    }
+
+    public javax.swing.JButton getNewTest() {
+        return newTest;
+    }
+
+    public void setNewTest(javax.swing.JButton newTest) {
+        this.newTest = newTest;
+    }
+
+    public javax.swing.JButton getPrefs() {
+        return prefs;
+    }
+
+    public void setPrefs(javax.swing.JButton prefs) {
+        this.prefs = prefs;
+    }
 }
