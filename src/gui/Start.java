@@ -19,7 +19,7 @@ public class Start extends javax.swing.JFrame {
      * Creates new form Start
      */
     private Start() {
-        utils.GuiUtils.configuraFrame(this);
+        utils.GuiUtils.initJFrame(this);
         initComponents();
         new StartDriver(this);
     }

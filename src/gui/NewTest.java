@@ -23,7 +23,7 @@ public class NewTest extends javax.swing.JFrame implements GoBackButton {
      */
     private NewTest() {
         //init design stuff
-        GuiUtils.configuraFrame(this);
+        GuiUtils.initJFrame(this);
         initComponents();
         new NewTestDriver(this);
         //load category panels
