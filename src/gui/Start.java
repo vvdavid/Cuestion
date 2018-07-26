@@ -13,10 +13,12 @@ import drivers.StartDriver;
  */
 public class Start extends javax.swing.JFrame {
 
+    public static final Start INSTANCE = new Start();
+
     /**
      * Creates new form Start
      */
-    public Start() {
+    private Start() {
         initComponents();
         utils.GuiUtils.configuraFrame(this);
         new StartDriver(this);

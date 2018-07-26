@@ -11,7 +11,7 @@ public class Main {
      */
     public static void main(String args[]) {
         com.alee.laf.WebLookAndFeel.install();
-        new Start().setVisible(true);
+        Start.INSTANCE.setVisible(true);
     }
 
 }
