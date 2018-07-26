@@ -9,12 +9,12 @@ package gui;
  *
  * @author David Vazquez
  */
-public class CategyPanel extends javax.swing.JPanel {
+public class CatPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form PanelCategoria
      */
-    public CategyPanel() {
+    public CatPanel() {
         initComponents();
     }
 
