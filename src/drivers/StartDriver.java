@@ -1,8 +1,10 @@
 package drivers;
 
+import gui.NewTest;
 import gui.Start;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import utils.GuiUtils;
 
 /**
  *
@@ -20,17 +22,17 @@ public class StartDriver implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(v.getNewTest())) {
-            System.out.println("nuevo test!");
-        } else if (e.getSource().equals(v.getMyData())) {
-            System.out.println("mis datooos");
+            GuiUtils.open(v, new NewTest());
+        } else if (e.getSource().equals(v.getHistory())) {
+            System.err.println("Mis datoos");
         } else if (e.getSource().equals(v.getPrefs())) {
-            System.out.println("mis preferencias");
+            System.err.println("mis preferecias");
         }
     }
 
     private void loadListeners() {
         v.getNewTest().addActionListener(this);
-        v.getMyData().addActionListener(this);
+        v.getHistory().addActionListener(this);
         v.getPrefs().addActionListener(this);
     }
 }
