@@ -32,15 +32,15 @@ public class Start extends javax.swing.JFrame {
     private void initComponents() {
 
         newTest = new javax.swing.JButton();
-        myData = new javax.swing.JButton();
+        history = new javax.swing.JButton();
         prefs = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bienvenido a Cuestion");
 
-        newTest.setText("Nuevo test...");
+        newTest.setText("Nuevo test");
 
-        myData.setText("Mis datos");
+        history.setText("Historial de examenes");
 
         prefs.setText("Preferencias");
 
@@ -52,9 +52,9 @@ public class Start extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(newTest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(myData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(history, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(prefs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(290, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -62,7 +62,7 @@ public class Start extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(newTest)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(myData)
+                .addComponent(history)
                 .addGap(129, 129, 129)
                 .addComponent(prefs)
                 .addContainerGap())
@@ -72,18 +72,10 @@ public class Start extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton myData;
+    private javax.swing.JButton history;
     private javax.swing.JButton newTest;
     private javax.swing.JButton prefs;
     // End of variables declaration//GEN-END:variables
-
-    public javax.swing.JButton getMyData() {
-        return myData;
-    }
-
-    public void setMyData(javax.swing.JButton myData) {
-        this.myData = myData;
-    }
 
     public javax.swing.JButton getNewTest() {
         return newTest;
@@ -99,5 +91,13 @@ public class Start extends javax.swing.JFrame {
 
     public void setPrefs(javax.swing.JButton prefs) {
         this.prefs = prefs;
+    }
+
+    public javax.swing.JButton getHistory() {
+        return history;
+    }
+
+    public void setHistory(javax.swing.JButton history) {
+        this.history = history;
     }
 }

@@ -28,10 +28,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="newTest" max="32767" attributes="0"/>
-                  <Component id="myData" max="32767" attributes="0"/>
+                  <Component id="history" max="32767" attributes="0"/>
                   <Component id="prefs" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="290" max="32767" attributes="0"/>
+              <EmptySpace pref="236" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -41,7 +41,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="newTest" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="myData" min="-2" max="-2" attributes="0"/>
+              <Component id="history" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
               <Component id="prefs" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -52,12 +52,12 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="newTest">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nuevo test..."/>
+        <Property name="text" type="java.lang.String" value="Nuevo test"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="myData">
+    <Component class="javax.swing.JButton" name="history">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Mis datos"/>
+        <Property name="text" type="java.lang.String" value="Historial de examenes"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="prefs">
