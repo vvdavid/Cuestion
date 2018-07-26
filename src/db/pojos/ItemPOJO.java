@@ -7,33 +7,24 @@ package db.pojos;
 public class ItemPOJO {
 
     private int id;
-    private String reactivo;
-    private String r1;
-    private String r2;
-    private String r3;
-    private int idDocumento;
-    private int idCategoria;
+    private String name;
+    private String a1;
+    private String a2;
+    private String a3;
+    private int idDocument;
+    private int idCategory;
 
     public ItemPOJO() {
     }
 
-    public ItemPOJO(String reactivo, String r1, String r2, String r3, int idDocumento, int idCategoria) {
-        this.reactivo = reactivo;
-        this.r1 = r1;
-        this.r2 = r2;
-        this.r3 = r3;
-        this.idDocumento = idDocumento;
-        this.idCategoria = idCategoria;
-    }
-
-    public ItemPOJO(int id, String reactivo, String r1, String r2, String r3, int idDocumento, int idCategoria) {
+    public ItemPOJO(int id, String name, String a1, String a2, String a3, int idDocument, int idCategory) {
         this.id = id;
-        this.reactivo = reactivo;
-        this.r1 = r1;
-        this.r2 = r2;
-        this.r3 = r3;
-        this.idDocumento = idDocumento;
-        this.idCategoria = idCategoria;
+        this.name = name;
+        this.a1 = a1;
+        this.a2 = a2;
+        this.a3 = a3;
+        this.idDocument = idDocument;
+        this.idCategory = idCategory;
     }
 
     public int getId() {
@@ -44,51 +35,52 @@ public class ItemPOJO {
         this.id = id;
     }
 
-    public String getReactivo() {
-        return reactivo;
+    public String getName() {
+        return name;
     }
 
-    public void setReactivo(String reactivo) {
-        this.reactivo = reactivo;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getR1() {
-        return r1;
+    public String getA1() {
+        return a1;
     }
 
-    public void setR1(String r1) {
-        this.r1 = r1;
+    public void setA1(String a1) {
+        this.a1 = a1;
     }
 
-    public String getR2() {
-        return r2;
+    public String getA2() {
+        return a2;
     }
 
-    public void setR2(String r2) {
-        this.r2 = r2;
+    public void setA2(String a2) {
+        this.a2 = a2;
     }
 
-    public String getR3() {
-        return r3;
+    public String getA3() {
+        return a3;
     }
 
-    public void setR3(String r3) {
-        this.r3 = r3;
+    public void setA3(String a3) {
+        this.a3 = a3;
     }
 
-    public int getIdDocumento() {
-        return idDocumento;
+    public int getIdDocument() {
+        return idDocument;
     }
 
-    public void setIdDocumento(int idDocumento) {
-        this.idDocumento = idDocumento;
+    public void setIdDocument(int idDocument) {
+        this.idDocument = idDocument;
     }
 
-    public int getIdCategoria() {
-        return idCategoria;
+    public int getIdCategory() {
+        return idCategory;
     }
 
-    public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
+    public void setIdCategory(int idCategory) {
+        this.idCategory = idCategory;
     }
+
 }

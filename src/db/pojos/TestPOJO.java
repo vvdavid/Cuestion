@@ -9,35 +9,20 @@ import java.sql.Timestamp;
 public class TestPOJO {
 
     private int id;
-    private int correctas;
-    private int incorrectas;
-    private int puntuacion;
-    private Timestamp fechaHora;
+    private int corrects;
+    private int incorrects;
+    private int score;
+    private Timestamp timestamp;
 
     public TestPOJO() {
     }
 
-    public TestPOJO(int correctas, int incorrectas, int puntuacion, Timestamp fechaHora) {
-        this.correctas = correctas;
-        this.incorrectas = incorrectas;
-        this.puntuacion = puntuacion;
-        this.fechaHora = fechaHora;
-    }
-
-    public TestPOJO(int id, int correctas, int incorrectas, int puntuacion, Timestamp fechaHora) {
+    public TestPOJO(int id, int corrects, int incorrects, int score, Timestamp timestamp) {
         this.id = id;
-        this.correctas = correctas;
-        this.incorrectas = incorrectas;
-        this.puntuacion = puntuacion;
-        this.fechaHora = fechaHora;
-    }
-
-    public Timestamp getFechaHora() {
-        return fechaHora;
-    }
-
-    public void setFechaHora(Timestamp fechaHora) {
-        this.fechaHora = fechaHora;
+        this.corrects = corrects;
+        this.incorrects = incorrects;
+        this.score = score;
+        this.timestamp = timestamp;
     }
 
     public int getId() {
@@ -48,27 +33,36 @@ public class TestPOJO {
         this.id = id;
     }
 
-    public int getCorrectas() {
-        return correctas;
+    public int getCorrects() {
+        return corrects;
     }
 
-    public void setCorrectas(int correctas) {
-        this.correctas = correctas;
+    public void setCorrects(int corrects) {
+        this.corrects = corrects;
     }
 
-    public int getIncorrectas() {
-        return incorrectas;
+    public int getIncorrects() {
+        return incorrects;
     }
 
-    public void setIncorrectas(int incorrectas) {
-        this.incorrectas = incorrectas;
+    public void setIncorrects(int incorrects) {
+        this.incorrects = incorrects;
     }
 
-    public int getPuntuacion() {
-        return puntuacion;
+    public int getScore() {
+        return score;
     }
 
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
+    public void setScore(int score) {
+        this.score = score;
     }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
 }
