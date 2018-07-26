@@ -13,7 +13,7 @@ public class SQLiteJDBCDriverConnection {
     public static final String DB_NAME = "db.db";
     public static final String DB_URL = "jdbc:sqlite:" + DB_NAME;
 
-    public static Connection connect() {
+    public static Connection getConnection() {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(DB_URL);
@@ -35,6 +35,6 @@ public class SQLiteJDBCDriverConnection {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(connect());
+        System.out.println(getConnection());
     }
 }
