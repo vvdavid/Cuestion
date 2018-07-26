@@ -27,8 +27,8 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="nuevoTest" max="32767" attributes="0"/>
-                  <Component id="misDatos" max="32767" attributes="0"/>
+                  <Component id="newTest" max="32767" attributes="0"/>
+                  <Component id="myData" max="32767" attributes="0"/>
                   <Component id="prefs" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="290" max="32767" attributes="0"/>
@@ -39,9 +39,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="nuevoTest" min="-2" max="-2" attributes="0"/>
+              <Component id="newTest" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="misDatos" min="-2" max="-2" attributes="0"/>
+              <Component id="myData" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
               <Component id="prefs" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -50,12 +50,12 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="nuevoTest">
+    <Component class="javax.swing.JButton" name="newTest">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nuevo test..."/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="misDatos">
+    <Component class="javax.swing.JButton" name="myData">
       <Properties>
         <Property name="text" type="java.lang.String" value="Mis datos"/>
       </Properties>

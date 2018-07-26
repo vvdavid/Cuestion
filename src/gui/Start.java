@@ -28,16 +28,16 @@ public class Start extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nuevoTest = new javax.swing.JButton();
-        misDatos = new javax.swing.JButton();
+        newTest = new javax.swing.JButton();
+        myData = new javax.swing.JButton();
         prefs = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bienvenido a Cuestion");
 
-        nuevoTest.setText("Nuevo test...");
+        newTest.setText("Nuevo test...");
 
-        misDatos.setText("Mis datos");
+        myData.setText("Mis datos");
 
         prefs.setText("Preferencias");
 
@@ -48,8 +48,8 @@ public class Start extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(nuevoTest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(misDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(newTest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(myData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(prefs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(290, Short.MAX_VALUE))
         );
@@ -57,9 +57,9 @@ public class Start extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(nuevoTest)
+                .addComponent(newTest)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(misDatos)
+                .addComponent(myData)
                 .addGap(129, 129, 129)
                 .addComponent(prefs)
                 .addContainerGap())
@@ -77,8 +77,8 @@ public class Start extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton misDatos;
-    private javax.swing.JButton nuevoTest;
+    private javax.swing.JButton myData;
+    private javax.swing.JButton newTest;
     private javax.swing.JButton prefs;
     // End of variables declaration//GEN-END:variables
 }
