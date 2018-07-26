@@ -16,12 +16,14 @@ import utils.GuiUtils;
  */
 public class NewTest extends javax.swing.JFrame implements GoBackButton {
 
+    public static final NewTest INSTANCE = new NewTest();
+
     /**
      * Creates new form NewTest
      */
-    public NewTest() {
-        initComponents();
+    private NewTest() {
         GuiUtils.configuraFrame(this);
+        initComponents();
         new NewTestDriver(this);
     }
 

@@ -22,7 +22,7 @@ public class StartDriver implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(v.getNewTest())) {
-            GuiUtils.open(v, new NewTest());
+            GuiUtils.open(v, NewTest.INSTANCE);
         } else if (e.getSource().equals(v.getHistory())) {
             System.err.println("Mis datoos");
         } else if (e.getSource().equals(v.getPrefs())) {
