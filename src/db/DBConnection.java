@@ -8,7 +8,7 @@ import java.sql.SQLException;
  *
  * @author David Vazquez
  */
-public class SQLiteJDBCDriverConnection {
+public class DBConnection {
 
     public static final String DB_NAME = "db.db";
     public static final String DB_URL = "jdbc:sqlite:" + DB_NAME;
