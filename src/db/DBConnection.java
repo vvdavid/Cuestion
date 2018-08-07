@@ -25,15 +25,7 @@ public class DBConnection {
             conn = DriverManager.getConnection(DB_URL);
         } catch (SQLException e) {
             System.out.println(e);
-        } finally {
-            try {
-                if (conn != null) {
-                    conn.close();
-                }
-            } catch (SQLException ex) {
-                System.out.println(ex);
-            }
-        }
+        } 
         return conn;
     }
 
