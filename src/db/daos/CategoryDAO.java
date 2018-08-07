@@ -10,6 +10,7 @@ import db.pojos.CategoryPOJO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.table.DefaultTableModel;
 
 public class CategoryDAO {
@@ -54,8 +55,7 @@ public class CategoryDAO {
             st.close();
             con.close();
         } catch (Exception e) {
-            System.out.println(e);
-
+            System.err.println(e);
         }
         return pojo;
     }
@@ -69,21 +69,14 @@ public class CategoryDAO {
             st = con.prepareStatement(SQL_QUERY_ALL);
             dt = new DefaultTableModel();
             ResultSet rs = st.executeQuery();
-//            while (rs.next()) {
-//                Object ob[] = new Object[2];
-//                ob[0] = rs.getObject("idCategory");
-//                ob[1] = rs.getObject("name");
-//                dt.addRow(ob);
-//            }
             dt = DBConnection.resultSetToDefaultTableModel(rs);
             DBConnection.closeStuff(rs, st, con);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.err.println(e);
         }
         return dt;
     }
 
-    //TODO verificar que funcione
     public static boolean deleteCategory(String id) {
         int num = 0;
         try {
@@ -92,14 +85,12 @@ public class CategoryDAO {
             st.setString(1, id);
             num = st.executeUpdate();
             DBConnection.closeStuff(st, con);
-            System.out.println("eliminado");
         } catch (Exception e) {
             System.err.println(e);
         }
         return num == 1;
     }
 
-    //TODO verficar metdoo
     public static boolean updateCategory(CategoryPOJO pojo) {
         Connection con;
         PreparedStatement st;
@@ -111,7 +102,7 @@ public class CategoryDAO {
             st.setInt(2, pojo.getId());
             num = st.executeUpdate();
             DBConnection.closeStuff(st, con);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.err.println(e);
         }
         return num == 1;
