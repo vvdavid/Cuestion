@@ -23,8 +23,8 @@ public class CategoryDAO {
     private static final String SQL_DELETE = "Delete from " + TABLE + " where id=?";
 
     public static boolean insertCategory(String name) {
-        Connection con = null;
-        PreparedStatement st = null;
+        Connection con;
+        PreparedStatement st;
         try {
             con = DBConnection.getConnection();
             st = con.prepareStatement(SQL_INSERT);
