@@ -22,19 +22,23 @@ public class CategoryDAO {
     private static final String SQL_UPDATE = "UPDATE " + TABLE + " set name=? where id=?";
     private static final String SQL_DELETE = "Delete from " + TABLE + " where id=?";
 
-    public static boolean insertCategory(String name) {
+    public static int insertCategory(String name) {
         Connection con;
         PreparedStatement st;
+        ResultSet resultSet;
+        int id = 0;
         try {
             con = DBConnection.getConnection();
             st = con.prepareStatement(SQL_INSERT);
             st.setString(1, name);
             st.executeUpdate();
-            return true;
-        } catch (Exception e) {
+            resultSet = st.getGeneratedKeys();
+            resultSet.next();
+            id = resultSet.getInt(1);
+        } catch (SQLException e) {
             System.err.println(e);
-            return false;
         }
+        return id;
     }
 
     public static CategoryPOJO query(String id) {
