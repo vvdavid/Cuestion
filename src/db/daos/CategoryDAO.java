@@ -1,11 +1,10 @@
 
 /*
- * Java Database Connectivity Code Generator v1.0
+ * Data Access Object Code Generator 1.0
  * Author: David Vazquez
  */
 package db.daos;
 
-import db.DBConnection;
 import db.pojos.CategoryPOJO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,10 +16,10 @@ public class CategoryDAO {
 
     private static final String TABLE = "Category";
     private static final String SQL_INSERT = "INSERT INTO " + TABLE + "(name) VALUES (?)";
-    private static final String SQL_QUERY_ALL = "Select * from " + TABLE;
-    private static final String SQL_QUERY = "Select * from " + TABLE + " where id=?";
-    private static final String SQL_UPDATE = "UPDATE " + TABLE + " set name=? where id=?";
-    private static final String SQL_DELETE = "Delete from " + TABLE + " where id=?";
+    private static final String SQL_QUERY_ALL = "SELECT * FROM " + TABLE;
+    private static final String SQL_QUERY = "SELECT * FROM " + TABLE + " WHERE id = ?";
+    private static final String SQL_UPDATE = "UPDATE " + TABLE + " set name = ? WHERE id = ?";
+    private static final String SQL_DELETE = "DELETE FROM " + TABLE + " WHERE id = ?";
 
     public static int insertCategory(String name) {
         Connection con;
@@ -28,7 +27,7 @@ public class CategoryDAO {
         ResultSet resultSet;
         int id = 0;
         try {
-            con = DBConnection.getConnection();
+            con = db.DBConnection.getConnection();
             st = con.prepareStatement(SQL_INSERT);
             st.setString(1, name);
             st.executeUpdate();
@@ -42,11 +41,11 @@ public class CategoryDAO {
     }
 
     public static CategoryPOJO query(String id) {
-        Connection con = DBConnection.getConnection();
+        Connection con = db.DBConnection.getConnection();
         PreparedStatement st = null;
         CategoryPOJO pojo = new CategoryPOJO();
         try {
-            con = DBConnection.getConnection();
+            con = db.DBConnection.getConnection();
             st = con.prepareStatement(SQL_QUERY);
             st.setString(1, id);
             ResultSet rs = st.executeQuery();
@@ -55,8 +54,8 @@ public class CategoryDAO {
                 pojo.setId(rs.getInt(1));
                 pojo.setName(rs.getString(2));
             }
-            DBConnection.close(rs, st, con);
-        } catch (Exception e) {
+            db.DBConnection.close(rs, st, con);
+        } catch (SQLException e) {
             System.err.println(e);
         }
         return pojo;
@@ -67,12 +66,12 @@ public class CategoryDAO {
         PreparedStatement st;
         DefaultTableModel dt = null;
         try {
-            con = DBConnection.getConnection();
+            con = db.DBConnection.getConnection();
             st = con.prepareStatement(SQL_QUERY_ALL);
             dt = new DefaultTableModel();
             ResultSet rs = st.executeQuery();
-            dt = DBConnection.resultSetToDefaultTableModel(rs);
-            DBConnection.close(rs, st, con);
+            dt = db.DBConnection.resultSetToDefaultTableModel(rs);
+            db.DBConnection.close(rs, st, con);
         } catch (SQLException e) {
             System.err.println(e);
         }
@@ -82,12 +81,12 @@ public class CategoryDAO {
     public static boolean deleteCategory(String id) {
         int num = 0;
         try {
-            Connection con = DBConnection.getConnection();
+            Connection con = db.DBConnection.getConnection();
             PreparedStatement st = con.prepareStatement(SQL_DELETE);
             st.setString(1, id);
             num = st.executeUpdate();
-            DBConnection.close(st, con);
-        } catch (Exception e) {
+            db.DBConnection.close(st, con);
+        } catch (SQLException e) {
             System.err.println(e);
         }
         return num == 1;
@@ -98,12 +97,12 @@ public class CategoryDAO {
         PreparedStatement st;
         int num = 0;
         try {
-            con = DBConnection.getConnection();
+            con = db.DBConnection.getConnection();
             st = con.prepareStatement(SQL_UPDATE);
             st.setString(1, pojo.getName());
             st.setInt(2, pojo.getId());
             num = st.executeUpdate();
-            DBConnection.close(st, con);
+            db.DBConnection.close(st, con);
         } catch (SQLException e) {
             System.err.println(e);
         }
