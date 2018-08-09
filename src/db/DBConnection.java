@@ -29,12 +29,12 @@ public class DBConnection {
         return conn;
     }
 
-    public static void closeStuff(ResultSet resultSet, PreparedStatement preparedStatement, Connection connection) throws SQLException {
+    public static void close(ResultSet resultSet, PreparedStatement preparedStatement, Connection connection) throws SQLException {
         resultSet.close();
         preparedStatement.close();
         connection.close();
     }
-    public static void closeStuff(PreparedStatement preparedStatement, Connection connection) throws SQLException {
+    public static void close(PreparedStatement preparedStatement, Connection connection) throws SQLException {
         preparedStatement.close();
         connection.close();
     }

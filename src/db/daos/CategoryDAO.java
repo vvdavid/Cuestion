@@ -55,9 +55,7 @@ public class CategoryDAO {
                 pojo.setId(rs.getInt(1));
                 pojo.setName(rs.getString(2));
             }
-            rs.close();
-            st.close();
-            con.close();
+            DBConnection.close(rs, st, con);
         } catch (Exception e) {
             System.err.println(e);
         }
@@ -74,7 +72,7 @@ public class CategoryDAO {
             dt = new DefaultTableModel();
             ResultSet rs = st.executeQuery();
             dt = DBConnection.resultSetToDefaultTableModel(rs);
-            DBConnection.closeStuff(rs, st, con);
+            DBConnection.close(rs, st, con);
         } catch (SQLException e) {
             System.err.println(e);
         }
@@ -88,7 +86,7 @@ public class CategoryDAO {
             PreparedStatement st = con.prepareStatement(SQL_DELETE);
             st.setString(1, id);
             num = st.executeUpdate();
-            DBConnection.closeStuff(st, con);
+            DBConnection.close(st, con);
         } catch (Exception e) {
             System.err.println(e);
         }
@@ -105,7 +103,7 @@ public class CategoryDAO {
             st.setString(1, pojo.getName());
             st.setInt(2, pojo.getId());
             num = st.executeUpdate();
-            DBConnection.closeStuff(st, con);
+            DBConnection.close(st, con);
         } catch (SQLException e) {
             System.err.println(e);
         }
