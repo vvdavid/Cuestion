@@ -9,12 +9,12 @@ package gui;
  *
  * @author David Vazquez
  */
-public class CatPanel extends javax.swing.JPanel {
+public class CategoryPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form PanelCategoria
      */
-    public CatPanel() {
+    public CategoryPanel() {
         initComponents();
     }
 
@@ -29,7 +29,7 @@ public class CatPanel extends javax.swing.JPanel {
 
         jLabel9 = new javax.swing.JLabel();
         selectedSpinner = new javax.swing.JSpinner();
-        selectedSlider = new javax.swing.JSlider();
+        selected = new javax.swing.JSlider();
         to = new javax.swing.JSpinner();
         range = new slider.RangeSlider();
         from = new javax.swing.JSpinner();
@@ -64,7 +64,7 @@ public class CatPanel extends javax.swing.JPanel {
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(selectedSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
-                    .addComponent(selectedSlider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(selected, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -81,7 +81,7 @@ public class CatPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(range, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(selectedSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(selected, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -93,8 +93,48 @@ public class CatPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private slider.RangeSlider range;
-    private javax.swing.JSlider selectedSlider;
+    private javax.swing.JSlider selected;
     private javax.swing.JSpinner selectedSpinner;
     private javax.swing.JSpinner to;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JSpinner getFrom() {
+        return from;
+    }
+
+    public void setFrom(javax.swing.JSpinner from) {
+        this.from = from;
+    }
+
+    public slider.RangeSlider getRange() {
+        return range;
+    }
+
+    public void setRange(slider.RangeSlider range) {
+        this.range = range;
+    }
+
+    public javax.swing.JSlider getSelected() {
+        return selected;
+    }
+
+    public void setSelected(javax.swing.JSlider selected) {
+        this.selected = selected;
+    }
+
+    public javax.swing.JSpinner getSelectedSpinner() {
+        return selectedSpinner;
+    }
+
+    public void setSelectedSpinner(javax.swing.JSpinner selectedSpinner) {
+        this.selectedSpinner = selectedSpinner;
+    }
+
+    public javax.swing.JSpinner getTo() {
+        return to;
+    }
+
+    public void setTo(javax.swing.JSpinner to) {
+        this.to = to;
+    }
 }

@@ -37,7 +37,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="selectedSpinner" pref="94" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="selectedSlider" alignment="0" max="32767" attributes="0"/>
+                  <Component id="selected" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -58,7 +58,7 @@
               <EmptySpace type="unrelated" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="range" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="selectedSlider" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="selected" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -73,7 +73,7 @@
     </Component>
     <Component class="javax.swing.JSpinner" name="selectedSpinner">
     </Component>
-    <Component class="javax.swing.JSlider" name="selectedSlider">
+    <Component class="javax.swing.JSlider" name="selected">
     </Component>
     <Component class="javax.swing.JSpinner" name="to">
     </Component>
