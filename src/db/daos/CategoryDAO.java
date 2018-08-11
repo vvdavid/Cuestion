@@ -108,4 +108,20 @@ public class CategoryDAO {
         }
         return num == 1;
     }
+
+    public static int count() {
+        int count = 0;
+        ResultSet rs;
+        try {
+            Connection con = db.DBConnection.getConnection();
+            PreparedStatement st = con.prepareStatement("select COUNT(id) FROM CATEGORY");
+            rs = st.executeQuery();
+            rs.next();
+            count = rs.getInt(1);
+            db.DBConnection.close(st, con);
+        } catch (SQLException e) {
+            System.err.println(e);
+        }
+        return count;
+    }
 }
