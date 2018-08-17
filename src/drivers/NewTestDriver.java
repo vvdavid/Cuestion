@@ -1,9 +1,12 @@
 package drivers;
 
+import db.daos.CategoryDAO;
+import gui.CategoryPanel;
 import gui.NewTest;
 import gui.Start;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
 import utils.GuiUtils;
 
 /**
@@ -15,8 +18,14 @@ public class NewTestDriver implements ActionListener {
     private NewTest v;
 
     public NewTestDriver(NewTest view) {
+        GuiUtils.initJFrame(v);
         v = view;
         loadListeners();
+        DefaultTableModel dt = CategoryDAO.loadTable();
+        for (int i = 0; i < dt.getRowCount(); i++) {
+            CategoryPanel catPanel = new CategoryPanel();
+            view.getPanel().add(new CategoryPanel());
+        }
     }
 
     @Override

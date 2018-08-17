@@ -1,5 +1,6 @@
 package main;
 
+import gui.NewTest;
 import gui.Start;
 
 /**
@@ -12,7 +13,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        Start.INSTANCE.setVisible(true);
+        if (args[0].equals("newTest")) {
+            NewTest.INSTANCE.setVisible(true);
+        } else {
+            Start.INSTANCE.setVisible(true);
+        }
     }
 
 }

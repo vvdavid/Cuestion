@@ -8,7 +8,6 @@ package gui;
 import interfaces.GoBackButton;
 import drivers.NewTestDriver;
 import javax.swing.JButton;
-import utils.GuiUtils;
 
 /**
  *
@@ -23,11 +22,9 @@ public class NewTest extends javax.swing.JFrame implements GoBackButton {
      */
     private NewTest() {
         //init design stuff
-        GuiUtils.initJFrame(this);
         initComponents();
-        new NewTestDriver(this);
+//        new NewTestDriver(this);
         //load category panels
-        
     }
 
     /**
@@ -145,5 +142,29 @@ public class NewTest extends javax.swing.JFrame implements GoBackButton {
 
     public void setStartTest(javax.swing.JButton startTest) {
         this.startTest = startTest;
+    }
+
+    public javax.swing.JButton getGoBack() {
+        return goBack;
+    }
+
+    public void setGoBack(javax.swing.JButton goBack) {
+        this.goBack = goBack;
+    }
+
+    public javax.swing.JLabel getItemCount() {
+        return itemCount;
+    }
+
+    public void setItemCount(javax.swing.JLabel itemCount) {
+        this.itemCount = itemCount;
+    }
+
+    public javax.swing.JPanel getPanel() {
+        return panel;
+    }
+
+    public void setPanel(javax.swing.JPanel panel) {
+        this.panel = panel;
     }
 }
