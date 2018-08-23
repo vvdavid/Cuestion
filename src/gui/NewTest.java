@@ -5,9 +5,11 @@
  */
 package gui;
 
-import interfaces.GoBackButton;
 import drivers.NewTestDriver;
+import interfaces.GoBackButton;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import utils.GuiUtils;
 
 /**
  *
@@ -15,14 +17,18 @@ import javax.swing.JButton;
  */
 public class NewTest extends javax.swing.JFrame implements GoBackButton {
 
-    public static final NewTest INSTANCE = new NewTest();
+    private static NewTest INSTANCE = new NewTest();
+
+    public static NewTest getInstance() {
+        return INSTANCE;
+    }
 
     /**
      * Creates new form NewTest
      */
     private NewTest() {
-        //init design stuff
         initComponents();
+        GuiUtils.initJFrame(this);
         new NewTestDriver(this);
     }
 

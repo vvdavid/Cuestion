@@ -13,10 +13,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        com.alee.laf.WebLookAndFeel.install();
         if (args[0].equals("newTest")) {
-            NewTest.INSTANCE.setVisible(true);
-        } else {
+            NewTest.getInstance().setVisible(true);
+        } else if (args[0].equals("start")) {
             Start.INSTANCE.setVisible(true);
+        } else {
+            System.err.println("Select a valid project configuration");
         }
     }
 

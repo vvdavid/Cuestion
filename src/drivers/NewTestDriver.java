@@ -15,10 +15,9 @@ import utils.GuiUtils;
  */
 public class NewTestDriver implements ActionListener {
 
-    private NewTest v;
+    private final NewTest v;
 
     public NewTestDriver(NewTest view) {
-        GuiUtils.initJFrame(v);
         v = view;
         loadListeners();
         DefaultTableModel dt = CategoryDAO.loadTable();
@@ -39,6 +38,7 @@ public class NewTestDriver implements ActionListener {
 
     private void loadListeners() {
         v.getGoBackButton().addActionListener(this);
+                .addActionListener(this);
         v.getStartTest().addActionListener(this);
     }
 }
