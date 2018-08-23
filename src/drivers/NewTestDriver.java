@@ -38,7 +38,6 @@ public class NewTestDriver implements ActionListener {
 
     private void loadListeners() {
         v.getGoBackButton().addActionListener(this);
-                .addActionListener(this);
         v.getStartTest().addActionListener(this);
     }
 }
